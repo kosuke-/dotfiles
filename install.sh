@@ -23,7 +23,7 @@ do
   else
     echo "$file"
   fi
-  ln -s $ORIGIN/$file $DEST/$file
+  ln -sF $ORIGIN/$file $DEST/$file
   echo "シンボリックリンクを貼りました"
   echo ""
 done
