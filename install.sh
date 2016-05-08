@@ -12,11 +12,16 @@ DOT_FILES=( \
 for file in ${DOT_FILES[@]}
 do
   if [ -a $DEST/$file ]; then
-    ln -s $ORIGIN/$file $DEST/$file.dot
-    echo "既にファイルが存在します。"
-    echo ".dotファイルを作成します。: $file"
+    echo "$file"
+    rm -f $DEST/$file~
+    cp -f $DEST/$file $DEST/$file~
+    echo "既にファイルが存在します: $file"
+    echo "バックアップを作成します: $DEST/$file~"
+    rm -f $DEST/$file
   else
-    ln -s $ORIGIN/$file $DEST/$file
-    echo "シンボリックリンクを貼りました: $file"
+    echo "$file"
   fi
+  ln -s $ORIGIN/$file $DEST/$file
+  echo "シンボリックリンクを貼りました"
+  echo ""
 done
