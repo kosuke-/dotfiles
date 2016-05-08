@@ -7,6 +7,8 @@ DOT_FILES=( \
   .bash_profile \
   .gitconfig \
   .git-completion.bash \
+  .vimrc \
+  .gvimrc \
   )
 
 for file in ${DOT_FILES[@]}
