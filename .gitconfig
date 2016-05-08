@@ -1,0 +1,13 @@
+[include]
+	path = ~/.gitconfig.local
+[color]
+	ui = auto
+[push]
+	default = current
+[alias]
+	co = checkout
+	cm = commit
+	cma = commit --amend
+	br = branch
+	lg = log --graph --oneline --format=format:'%h [%ci] %s'
+  ss = status -s
