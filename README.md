@@ -4,6 +4,10 @@ dotfiles
 
 Release Notes
 --------
+### 0.2 - 16 Jul 2016
+
+- svn log風のgit logエイリアス `git lgns` を追加
+
 ### 0.1 - 8 May 2016
 
 - 個人設定と他OSの設定をそとだし
