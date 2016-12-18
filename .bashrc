@@ -6,6 +6,7 @@ PS1="\h [\W/]\$ "
 #-----------------------------
 # alias
 #-----------------------------
+alias vi='vim'
 alias ls='ls -F -G'
 alias la='ls -la'
 alias ll='ls -l'
