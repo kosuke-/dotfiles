@@ -36,6 +36,7 @@ DOT_FILES=( \
   .bash_profile \
   .gitconfig \
   .git-completion.bash \
+  .git-prompt.sh \
   .vimrc \
   .gvimrc \
   )

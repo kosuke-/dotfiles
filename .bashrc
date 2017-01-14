@@ -1,9 +1,4 @@
 #-----------------------------
-# terminal
-#-----------------------------
-PS1="\u@\h [\W/]\$ "
-
-#-----------------------------
 # alias
 #-----------------------------
 alias vi='vim'
@@ -32,6 +27,13 @@ fi
 if [ -f ~/.git-completion.bash ]; then
   source ~/.git-completion.bash
 fi
+if [ -f ~/.git-prompt.sh ]; then
+  source ~/.git-prompt.sh
+  export GIT_PS1_SHOWDIRTYSTATE=1
+  export GIT_PS1_SHOWUPSTREAM=1
+  export GIT_PS1_SHOWUNTRACKEDFILES=
+  export GIT_PS1_SHOWSTASHSTATE=1
+fi
 
 #-----------------------------
 # other os
@@ -49,4 +51,9 @@ if [ "$(uname)" == 'Darwin' ]; then
     source ~/.bashrc_osx
   fi
 fi
+
+#-----------------------------
+# terminal
+#-----------------------------
+PS1='\u@\h [\W]$(__git_ps1 " (%s)")\$ '
 
