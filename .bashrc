@@ -17,8 +17,8 @@ export GREP_COLOR='1;37;41'
 #-----------------------------
 # local
 #-----------------------------
-if [ -f ~/.bashrc.local ]; then
-  source ~/.bashrc.local
+if [ -f ~/.bashrc_local ]; then
+  source ~/.bashrc_local
 fi
 
 #-----------------------------
