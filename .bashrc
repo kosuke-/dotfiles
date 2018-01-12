@@ -10,7 +10,7 @@ alias mv='mv -iv'
 alias view='vim -R'
 alias cp='cp -i'
 alias grep='grep -E --color=auto'
-alias rgrep='find . -name "*.git*" -prune -o -type f -print0 | xargs -0 grep --color=auto'
+alias rgrep='find . -type d \( -name "*.git*" -o -name "node_modules" -o -name "static" \) -prune -o -type f -print0 | xargs -0 grep --color=auto'
 
 export GREP_COLOR='1;37;41'
 
@@ -55,5 +55,5 @@ fi
 #-----------------------------
 # terminal
 #-----------------------------
-PS1='\[\033[01;35m\]\u\[\033[01;31m\]@\[\033[01;35m\]\h \[\033[00;33m\][\W]$(__git_ps1 " (%s)")\[\033[01;00m\]\$ '
+PS1='\[\033[01;35m\]\u\[\033[01;31m\]@\[\033[01;35m\]\h \[\033[00;33m\][\W]$(__git_ps1 " (%s)")\[\033[01;00m\]\n\$ '
 
