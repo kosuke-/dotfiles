@@ -9,7 +9,6 @@ alias rm='rm -iv'
 alias mv='mv -iv'
 alias view='vim -R'
 alias cp='cp -i'
-alias grep='grep -E --color=auto'
 alias rgrep='find . -type d \( -name "*.git*" -o -name "node_modules" -o -name "static" \) -prune -o -type f -print0 | xargs -0 grep --color=auto'
 
 export GREP_COLOR='1;37;41'
