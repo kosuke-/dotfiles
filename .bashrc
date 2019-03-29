@@ -16,8 +16,8 @@ export GREP_COLOR='1;37;41'
 #-----------------------------
 # local
 #-----------------------------
-if [ -f ~/.bashrc_local ]; then
-  source ~/.bashrc_local
+if [ -f ~/.bashrc.local ]; then
+  source ~/.bashrc.local
 fi
 
 #-----------------------------
@@ -38,16 +38,16 @@ fi
 # other os
 #-----------------------------
 if [ "$(uname)" == 'Linux' ]; then
-  if [ -f ~/.bashrc_raspbian ]; then
-    source ~/.bashrc_raspbian
+  if [ -f ~/.bashrc.raspbian ]; then
+    source ~/.bashrc.raspbian
   fi
-  if [ -f ~/.bashrc_centos ]; then
-    source ~/.bashrc_centos
+  if [ -f ~/.bashrc.centos ]; then
+    source ~/.bashrc.centos
   fi
 fi
 if [ "$(uname)" == 'Darwin' ]; then
-  if [ -f ~/.bashrc_osx ]; then
-    source ~/.bashrc_osx
+  if [ -f ~/.bashrc.osx ]; then
+    source ~/.bashrc.osx
   fi
 fi
 
